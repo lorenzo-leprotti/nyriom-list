@@ -1,0 +1,523 @@
+First Name,Last Name,Job Title,Company Name
+Victor,Schneider,Director Composites Engineering,Aciturri
+Isabella,Richter,Chief Operating Officer,Kawasaki Heavy Industries
+Julia,Patel,CEO,3M Aerospace
+Kenji,Watanabe,VP Program Management,TransDigm Group
+Robert,Krishnan,VP Strategic Partnerships,Dassault Systemes
+Priya,Fuchs,Director ESG Programs,Arkema SA
+Sergio,Bergmann,Manufacturing Engineering Manager,Mitsubishi Heavy Industries
+Andre,Choi,Sustainability Manager,Northrop Grumman
+Emma,Vega,VP Strategic Partnerships,Toray Industries
+Rafael,Schneider,Senior Composites Specialist,TransDigm Group
+Tobias,Lindstrom,Director R&D,Dassault Systemes
+Rafael,Torres,Composites Manufacturing Manager,Magellan Aerospace
+Barbara,Martinez,Chief Technology Officer,JEC Group
+Alexander,Schmidt,Director Program Management,Saab AB
+Fernando,Hoffmann,VP Manufacturing,Aeroplex Group
+Nikolai,Fernandez,Director Supply Chain,Lockheed Martin
+Fatima,Sato,Chief Operating Officer,Altair Engineering
+Yuki,Vega,Marketing Coordinator,JEC Group
+Stefan,Bergmann,Director R&D,Pilatus Aircraft
+Stefan,Berger,VP Program Management,Orbital Composites
+Miho,Tanaka,Chief Operating Officer,Lanxess AG
+Emma,Romero,EVP Strategy,Rolls-Royce
+Valentina,Ferrari,Lead Composites Engineer,Parker Hannifin
+Chen,Stein,Director Composites Engineering,Liebherr Aerospace
+Andre,Navarro,Director Quality Assurance,Turkish Technic
+Takeshi,Sato,Director Program Management,DLR - German Aerospace Center
+Chiara,Schmidt,VP Sustainability,Henkel AG
+Shin,Patel,PR Assistant,FlightGlobal
+Luca,Seidel,Junior Associate,Deloitte Consulting
+Olivier,Bergmann,Director Composite Procurement,Aernnova Aerospace
+Guillaume,Seidel,Materials Procurement Lead,Daher
+Andreas,Lopez,AS9100 Lead Auditor,Howmet Aerospace
+Xin,Stein,VP Procurement,Air New Zealand Engineering
+Miho,De Luca,Chief Sustainability Officer,Renegade Materials
+Ananya,Fuchs,Materials Engineering Manager,Embraer
+Leopold,Zimmerman,Director Engineering,Etihad Engineering
+Martin,Mayer,VP Business Development,Daher
+Monique,Hauser,Materials Science Lead,BAE Systems
+Carlos,Yamamoto,Head of Composite Manufacturing,Liebherr Aerospace
+Valentina,Klein,EVP Operations,Ducommun
+Christoph,Johnson,Research Student,AIG Insurance
+Carlos,Martinez,Director Certification,Fraunhofer IFAM
+Felix,Sato,VP Procurement,Senior plc
+Alexandra,Mancini,Staff Attorney,Boston Consulting Group
+Christian,Martinez,Materials Engineering Manager,Leonardo S.p.A.
+Elena,Watanabe,Director Engineering,Delta TechOps
+Valentina,Watanabe,VP Business Development,KPMG Advisory
+Maximilian,Mancini,Manufacturing Engineering Manager,Aciturri
+Jennifer,Moreau,Quality Manager,Collins Aerospace
+Guillaume,Sato,Manufacturing Engineering Manager,Boeing
+Alvaro,Torres,Chief Materials Engineer,Safran
+Xin,Santos,Lead Composites Engineer,Northrop Grumman
+Kaori,Rossi,Senior Director Operations,McKinsey & Company
+Christoph,Wolf,Materials Science Lead,Pratt & Whitney
+Christoph,Ferrari,Director Business Development,Henkel AG
+Katrin,Krishnan,Director Business Development,Solvay Composite Materials
+Christine,Johnson,Senior Vice President R&D,Solvay Composite Materials
+Yuki,Hoffmann,Chief Materials Engineer,Curtiss-Wright
+Pilar,Suzuki,VP Technology,Pratt & Whitney
+Carlos,Schuster,Director Engineering,Evonik Industries
+Klaus,Park,VP Materials & Processes,Triumph Group
+Dorothea,Weber,Managing Director,Baker McKenzie
+Ayumi,Nakamura,Director Certification,SABIC
+Daniel,Navarro,Head of Procurement,Aeroplex Group
+Lucia,Hernandez,Director Composites Engineering,Northrop Grumman
+Ana,Hoffmann,Composites R&D Manager,TU Delft Aerospace
+Michael,Ferrari,Director Composites Engineering,BAE Systems
+Patrick,Ito,Director Strategic Accounts,HEICO Corporation
+Beatrice,Martinez,NDT Manager,Latecoere
+Jennifer,Braun,VP Technology,Bombardier Aviation
+Erik,Bergmann,Sourcing Manager,BAE Systems
+Rafael,Garcia,NDT Manager,AAR Corp
+Mei,Chen,Director Composite Procurement,Safran
+Raj,Stein,Sourcing Manager,Saab AB
+Pierre,Laurent,Senior Materials Engineer,Fokker Technologies
+Deepa,Strauss,Materials Engineering Manager,Pratt & Whitney
+Sanjay,Nakamura,Director Composites Engineering,Boeing
+Maximilian,Berger,Senior Vice President R&D,Teijin Limited
+Barbara,Yamamoto,Director Strategic Accounts,Mitsubishi Heavy Industries
+Simone,Kobayashi,Director Business Development,Parker Hannifin
+Nadia,Kim,Senior Materials Engineer,Honeywell Aerospace
+Alvaro,Mueller,Director ESG Programs,Mitsubishi Heavy Industries
+Dominik,Lee,VP Business Development,Teledyne Technologies
+Maria,Williams,VP Technology,ST Aerospace
+Greta,Stein,Research Student,AIG Insurance
+Alexander,Choi,Chief Materials Engineer,FACC AG
+Wei,Engel,Quality Engineering Lead,ITP Aero
+Celine,Hartmann,PR Assistant,KPMG Advisory
+Blanca,Torres,Strategic Procurement Director,Woodward Inc.
+Jennifer,Bauer,Senior Director Operations,Boeing
+Emma,Engel,Legal Counsel,FlightGlobal
+Hans,Garcia,Chief Operating Officer,Textron Aviation
+Nikolai,Hauser,Research Analyst,DLA Piper
+Pilar,Conti,PR Assistant,McKinsey & Company
+Margot,Schmidt,Senior Materials Engineer,Boeing
+Ingrid,Strauss,Director Composite Procurement,Aciturri
+Alexandra,Krishnan,VP Technology,FACC AG
+Amira,Krause,SVP Business Development,Kawasaki Heavy Industries
+Maria,De Luca,Director Supply Chain,GE Aerospace
+Felix,Torres,Director Strategic Accounts,3M Aerospace
+Patrick,Wolf,Plant Manager,HAECO Group
+Gabrielle,Park,VP Business Development,Liebherr Aerospace
+Clara,Seidel,VP Quality & Certification,Solvay Composite Materials
+Marco,Hartmann,Green Materials Director,Henkel AG
+Florian,Lindstrom,VP Technology,Hexcel Corporation
+Lucia,Vogt,Director Business Development,Barclays Aerospace Finance
+Jennifer,Ruiz,Director R&D,Baker McKenzie
+Philippe,Liu,Director Quality Assurance,Daher
+Matteo,Hauser,VP Strategic Partnerships,Lockheed Martin
+Beatrice,Fuchs,Legal Counsel,TU Delft Aerospace
+Romain,Ito,Legal Counsel,JEC Group
+Sakura,Torres,Director Certification,Barclays Aerospace Finance
+Akira,Maier,Head of Materials Technology,Lanxess AG
+Dorothea,Mueller,Strategic Procurement Director,HEICO Corporation
+Jennifer,Engel,Process Engineer Lead,Ducommun
+Eva,Tanaka,Sourcing Manager,Ducommun
+Nikolai,Hernandez,VP Operations,Liebherr Aerospace
+Helene,Dupont,Manufacturing Engineering Manager,AAR Corp
+Michael,Beaumont,VP Strategic Partnerships,Covestro AG
+Constance,Koch,Advanced Materials Researcher,University of Bristol Composites
+Chen,Bergmann,Junior Associate,JEC Group
+Katrin,Fuchs,Polymer Engineer,Aernnova Aerospace
+Stefan,Torres,CEO,ONERA
+Nicole,Dubois,Senior Director Operations,HAECO Group
+Ayumi,Lopez,SVP Business Development,ANSYS Inc.
+Rina,Maier,VP Quality & Certification,Daher
+Matteo,Krause,Plant Manager,Kawasaki Heavy Industries
+Kazuki,Koch,Chief Operating Officer,Purdue University Composites Lab
+Patrick,Williams,Director Strategic Accounts,Fraunhofer IFAM
+Florian,Fuchs,Director Strategic Accounts,Senior plc
+Emma,Johansson,Head of Sustainable Materials,Gurit Holding
+Sophie,Garcia,Director R&D,RUAG International
+Erik,Lindstrom,VP Materials & Processes,Airbus
+Gabrielle,Seidel,Director Certification,Dassault Aviation
+Javier,Santos,Director Business Development,ITP Aero
+Elena,Sharma,Managing Director,Mitsubishi Chemical
+Elena,Braun,Director Composites Engineering,Textron Aviation
+Ayumi,Kim,Supply Chain Director,Embraer
+Miho,Wolf,Director Engineering,Kaman Aerospace
+Tobias,Maier,Accounting Associate,FlightGlobal
+Celine,Kern,Accounting Associate,ONERA
+Arjun,Volkov,Marketing Coordinator,Deloitte Consulting
+Jan,Takahashi,VP Quality & Certification,Premium Aerotec
+Javier,Lindstrom,Sustainability Manager,Pilatus Aircraft
+Anna,Sharma,Materials Science Lead,DLR - German Aerospace Center
+Lars,Fernandez,Senior Materials Engineer,GKN Aerospace
+Rafael,De Luca,Global Sourcing Lead,Air France Industries
+Sebastian,Choi,Head of Composite Manufacturing,Stelia Aerospace
+Astrid,Lefevre,Head of Procurement,Bombardier Aviation
+Astrid,Vogt,VP Procurement,Pilatus Aircraft
+Akira,Takahashi,Industrial Engineering Director,SIA Engineering
+Victor,Seidel,Marketing Coordinator,Baker McKenzie
+Erik,Mancini,Vice President Engineering,Aerostructures Engineering
+Ingrid,Roth,Circular Economy Lead,Gurit Holding
+Alexander,Laurent,Director Business Development,Emirates Engineering
+Martin,Johansson,Head of Materials Technology,BASF SE
+Michael,Dubois,Chief Materials Engineer,Safran
+Carlos,Seidel,Marketing Coordinator,KPMG Advisory
+Friedrich,Zimmerman,Senior Director Operations,Collins Aerospace
+Taro,Lee,VP Materials & Processes,ONERA
+Hans,Johnson,Production Director,Magellan Aerospace
+Pierre,Neumann,Director Quality Assurance,Honeywell Aerospace
+James,Berger,Supply Chain Director,Safran
+Sanjay,Lang,VP Technology,Deloitte Consulting
+Yuki,Volkov,Senior Director Operations,Boeing
+Chiara,Lefevre,VP Supply Management,ST Aerospace
+Teresa,Fuchs,Sustainability Manager,BASF SE
+Yuki,Moreau,Industrial Engineering Director,ST Aerospace
+Nicole,Alvarez,VP Materials & Processes,Magellan Aerospace
+Dominik,Andersen,Director Strategic Accounts,National Composites Centre
+Greta,Navarro,Quality Engineering Lead,Air France Industries
+Camille,Santos,Sourcing Manager,Albany International Composites
+Nanami,Beaumont,Executive Vice President,Rolls-Royce
+Leopold,Santos,Director Quality Assurance,ANSYS Inc.
+Nadia,Torres,Director Strategic Accounts,Woodward Inc.
+Patrick,Santos,Director Program Management,Moog Inc.
+Sarah,De Luca,Managing Director,AIG Insurance
+Hiroshi,Krishnan,Materials Engineering Manager,National Institute for Aviation Research
+Teresa,Hauser,Vice President Engineering,Lanxess AG
+Nadia,Hauser,Director Engineering,Aviation Week Network
+Alexandra,Al-Hassan,VP Supply Management,Lockheed Martin
+Christine,Lefevre,Director Business Development,MSC Software
+Felix,Beaumont,Senior Procurement Manager,Kawasaki Heavy Industries
+Christoph,Dupont,Head of Composite Manufacturing,Airbus
+Isabella,Gupta,AS9100 Lead Auditor,Lufthansa Technik
+Xin,Suzuki,Head of Materials Technology,Embraer
+Antoine,Dupont,Executive Vice President,Siemens Digital Industries
+Taro,Garcia,Production Director,TransDigm Group
+Victor,Schuster,Director R&D,Air New Zealand Engineering
+Luca,Wagner,Production Director,Teledyne Technologies
+Ana,Wang,Plant Manager,Dassault Aviation
+Javier,Martinez,Accounting Associate,Marsh Aviation
+Simone,Seidel,Chief Technology Officer,Marsh Aviation
+Xin,Williams,Materials Engineering Manager,BASF SE
+Tobias,Sato,Head of Composite Manufacturing,Embraer
+Camille,Rossi,VP Program Management,ESI Group
+Nadia,Sato,Vice President Engineering,Saab AB
+Nadia,Roth,Manufacturing Engineering Manager,Safran
+Carlos,Strauss,Director Engineering,Liebherr Aerospace
+Carmen,Maier,Director Business Development,Covestro AG
+Friedrich,Braun,VP Supply Management,Honeywell Aerospace
+Nadia,Vega,President,Fraunhofer IFAM
+Dominik,Wolf,EVP Operations,Honeywell Aerospace
+James,Yamamoto,VP Program Management,Hexcel Corporation
+Nikolai,Dupont,Senior Materials Engineer,Saab AB
+Hans,Conti,Managing Director,HEICO Corporation
+Paolo,Romero,VP Procurement,Boeing
+Camille,Fernandez,Research Analyst,Marsh Aviation
+Olga,Zimmerman,Chief Materials Engineer,Premium Aerotec
+Antoine,Zimmerman,VP Business Development,McKinsey & Company
+Antoine,Fuchs,Composites R&D Manager,Howmet Aerospace
+Ryota,Mancini,Polymer Engineer,FACC AG
+Christian,Jung,Process Engineer Lead,Figeac Aero
+Lars,Zimmerman,VP Quality & Certification,Orbital Composites
+Chiara,Tanaka,VP Supply Management,Air New Zealand Engineering
+Ravi,De Luca,Chief Financial Officer,Covestro AG
+Sebastian,Engel,Editorial Assistant,Baker McKenzie
+Sanjay,Fuchs,Student Intern,AIG Insurance
+Maria,Arnold,Student Intern,KPMG Advisory
+Francesca,Fischer,Director R&D,Dow Inc.
+Felix,Rossi,Managing Director,Dassault Systemes
+Guillaume,Weber,EVP Operations,Huntsman Corporation
+Constance,Rossi,Finance Analyst,National Composites Centre
+Klaus,Maier,Director Strategic Accounts,Dentons LLP
+Hiroshi,De Luca,Director Certification,FACC AG
+Beatrice,Schuster,Composites Manufacturing Manager,Mitsubishi Heavy Industries
+Ravi,Hernandez,Director Quality Assurance,Albany International Composites
+Haruka,Maier,Director Composite Procurement,Curtiss-Wright
+Felix,Lee,Director Business Development,Dassault Aviation
+Sebastian,Krishnan,PR Assistant,FlightGlobal
+Romain,Lopez,Director Certification,Lockheed Martin
+Fatima,Fischer,Head of Procurement,Dassault Aviation
+Sophie,Richter,Plant Manager,Fokker Technologies
+Carmen,Ruiz,Chief Sustainability Officer,Bombardier Aviation
+Takeshi,Braun,Global Sourcing Lead,Leonardo S.p.A.
+Delphine,Hernandez,Quality Engineering Lead,Aciturri
+Christoph,Lang,Director Strategic Accounts,Spirit AeroSystems
+Olga,Vogt,Director Certification,Cranfield University
+Teresa,Lee,AS9100 Lead Auditor,Howmet Aerospace
+Mika,Koch,Director Program Management,TU Delft Aerospace
+Shin,Alvarez,VP Strategic Partnerships,3M Aerospace
+Greta,Laurent,VP Quality & Certification,Delta TechOps
+Antoine,Kobayashi,Event Coordinator,Barclays Aerospace Finance
+Christine,Dupont,Legal Counsel,Dentons LLP
+Tobias,Jung,Director ESG Programs,Leonardo S.p.A.
+Dominik,Neumann,Legal Counsel,Deutsche Bank
+Barbara,Kern,Sourcing Manager,Kawasaki Heavy Industries
+Takeshi,Andersen,PR Assistant,Boston Consulting Group
+Omar,Ito,Materials Science Lead,SGL Carbon
+Wei,Fischer,Certification Manager,HEICO Corporation
+Javier,Fuchs,VP Program Management,Aviation Week Network
+Nikolai,Schuster,President & CEO,Airbus
+Celine,Koch,Director Composites Engineering,Moog Inc.
+Paolo,Ruiz,NDT Manager,Parker Hannifin
+Mika,Mancini,Executive Vice President,Embraer
+Lucia,Richter,Director Engineering,Saab AB
+Chen,Hauser,Materials Science Lead,Gulfstream Aerospace
+Michael,Navarro,Director R&D,Teledyne Technologies
+Chen,Ruiz,Vice President Engineering,Deutsche Bank
+Valentina,Suzuki,Senior Materials Engineer,Triumph Group
+Amira,Zimmerman,VP Quality & Certification,AAR Corp
+David,Volkov,Quality Manager,TransDigm Group
+Shin,Moreau,VP Supply Management,Turkish Technic
+Rafael,Fischer,Managing Director,CGTech
+Bernhard,Ferrari,Senior Procurement Manager,Northrop Grumman
+Ingrid,Seidel,Chief Executive Officer,Aviation Week Network
+Nicole,Mancini,Head of Composite Manufacturing,Rolls-Royce
+Fernando,Bauer,Director Supply Chain,Lockheed Martin
+Andreas,Koch,VP Quality & Certification,FlightGlobal
+Anna,Mayer,Research Analyst,DLA Piper
+Alexandra,Moreau,Managing Director,Deutsche Bank
+Alexandra,Zimmerman,Director Business Development,Textron Aviation
+Andreas,Engel,Finance Analyst,McKinsey & Company
+Andreas,Schneider,Director Certification,DuPont de Nemours
+Isabella,Hauser,Research Student,Composites World Media
+Nikolai,Schmidt,Director Engineering,Deloitte Consulting
+Yuki,Watanabe,Sustainability Manager,Toray Industries
+Dorothea,Koch,Chief Executive Officer,Boston Consulting Group
+Yuki,Keller,VP Program Management,Gurit Holding
+Priya,Krause,Director Composite Procurement,Lockheed Martin
+Bernhard,Mueller,Quality Engineering Lead,FACC AG
+Leopold,Al-Hassan,Director Quality Assurance,Collins Aerospace
+Takeshi,Santos,Green Materials Director,Mitsubishi Chemical
+Dominik,Ferrari,VP Strategic Partnerships,Baker McKenzie
+Priya,Ito,VP Program Management,Northrop Grumman
+Thomas,Santos,Director Strategic Accounts,DLA Piper
+Gabrielle,Sato,Director Quality Assurance,Rolls-Royce
+Romain,Gupta,Marketing Coordinator,AIG Insurance
+Hans,Romero,Director Program Management,Stelia Aerospace
+Christian,Schuster,VP Program Management,Dassault Aviation
+Xin,Torres,PR Assistant,Baker McKenzie
+Julia,Maier,VP Quality & Certification,Kaman Aerospace
+Emma,Dubois,Director Strategic Accounts,Deloitte Consulting
+Julia,Takahashi,EVP Strategy,Honeywell Aerospace
+Raj,Laurent,Chief Technology Officer,Ducommun
+Chen,Kobayashi,NDT Manager,ST Aerospace
+Felix,Park,Legal Counsel,Boston Consulting Group
+Javier,De Luca,Senior Vice President R&D,Pilatus Aircraft
+Ayumi,Fernandez,VP Business Development,Howmet Aerospace
+Beatrice,Mueller,Chairman,ONERA
+Margot,Mancini,Chief Materials Engineer,Safran
+Takeshi,Fuchs,VP Operations,Delta TechOps
+Alexander,Hoffmann,Global Sourcing Lead,Airbus
+Sophie,Rossi,Certification Manager,Avio Aero
+Haruka,Schneider,Vice President Engineering,Marsh Aviation
+Christian,Richter,Circular Economy Lead,Pilatus Aircraft
+Sarah,Keller,Senior Procurement Manager,Textron Aviation
+Philippe,Maier,Chief Technology Officer,Boeing
+Mika,Romero,Head of Materials Technology,ITP Aero
+Taro,Wang,Senior Materials Engineer,BAE Systems
+Alvaro,Seidel,Strategic Procurement Director,Bombardier Aviation
+Mei,Fischer,SVP Business Development,Bombardier Aviation
+Ravi,Bergmann,Senior Composites Specialist,Woodward Inc.
+Margot,Martinez,Chief Operating Officer,Composites World Media
+Elena,Bergmann,Marketing Coordinator,McKinsey & Company
+Arjun,Laurent,Chief Operating Officer,Textron Aviation
+Christian,Kern,Industrial Engineering Director,Etihad Engineering
+Sanjay,Johnson,VP Business Development,Teijin Limited
+Yuki,Dupont,Director Quality Assurance,Senior plc
+Hans,Wang,Senior Composites Specialist,Curtiss-Wright
+Rina,Schuster,Director Quality Assurance,CGTech
+Emma,Fernandez,VP Quality & Certification,Emirates Engineering
+Paolo,Fuchs,Director Certification,Dentons LLP
+Robert,Watanabe,Production Director,Collins Aerospace
+Julia,Hoffmann,Advanced Materials Researcher,MIT AeroAstro
+Luca,Kim,VP Quality & Certification,ESI Group
+Katrin,Romero,Director R&D,Stelia Aerospace
+Ayumi,Yamamoto,Director Composites Engineering,DuPont de Nemours
+Dorothea,Vogt,VP Business Development,Lockheed Martin
+Michael,Schuster,Director Certification,Composites World Media
+Klaus,Martinez,Chief Operating Officer,Deutsche Bank
+Michael,Kobayashi,Vice President Engineering,McKinsey & Company
+Akira,Seidel,Chief Procurement Officer,Turkish Technic
+David,Fernandez,VP Manufacturing,Airbus
+Maria,Fuchs,VP Quality & Certification,Gurit Holding
+Teresa,Lindstrom,VP Program Management,HEICO Corporation
+Carmen,Hoffmann,Legal Counsel,Deutsche Bank
+Kenji,Mayer,Sourcing Manager,Avio Aero
+Arjun,Vogt,Process Engineer Lead,Kaman Aerospace
+Ayumi,Wolf,VP Materials & Processes,Moog Inc.
+Christine,Suzuki,Advanced Materials Researcher,DLR - German Aerospace Center
+Anna,Jung,Plant Manager,Daher
+Jan,Garcia,Director R&D,Northrop Grumman
+Teresa,Ferrari,Director Certification,Lufthansa Technik
+Maria,Volkov,VP Materials & Processes,Lockheed Martin
+Helene,Fernandez,Advanced Materials Researcher,Avio Aero
+Margot,Santos,Head of Composite Manufacturing,Kaman Aerospace
+Mei,Weber,Director Program Management,KPMG Advisory
+Maximilian,Watanabe,AS9100 Lead Auditor,Lufthansa Technik
+Margot,Mueller,Research Analyst,DLA Piper
+Nikolai,Mueller,Materials Science Lead,MIT AeroAstro
+Rafael,Takahashi,Senior Director Operations,Zoltek Companies
+Anna,Lee,Chief Financial Officer,Barclays Aerospace Finance
+Deepa,Mueller,VP Technology,Deloitte Consulting
+Amira,Weber,Certification Manager,Stelia Aerospace
+Christine,Wang,Head of Procurement,Delta TechOps
+Maximilian,Torres,Managing Director,Siemens Digital Industries
+Hiroshi,Sato,Global Sourcing Lead,TransDigm Group
+Arjun,Hernandez,VP Strategic Partnerships,Saab AB
+Robert,Liu,Director Business Development,Pratt & Whitney
+Alexandra,Ruiz,Director ESG Programs,Gulfstream Aerospace
+Nanami,Choi,VP Business Development,Aeroplex Group
+Haruka,Arnold,Director Strategic Accounts,Textron Aviation
+Clara,Braun,VP Strategic Partnerships,HAECO Group
+Kenji,Mueller,EVP Strategy,Moog Inc.
+Ananya,Alvarez,SVP Engineering,MSC Software
+Olga,Williams,Senior Materials Engineer,Latecoere
+Hiroshi,Dubois,PR Assistant,FlightGlobal
+Akira,Mancini,Director Engineering,BAE Systems
+Antoine,De Luca,Quality Engineering Lead,Delta TechOps
+Eva,Wagner,VP Materials & Processes,Toray Industries
+Miguel,Keller,Senior Procurement Manager,Parker Hannifin
+Miguel,Strauss,Editorial Assistant,Deloitte Consulting
+Rafael,Zimmerman,Senior Director Operations,Curtiss-Wright
+Olga,Santos,VP Strategic Partnerships,Boston Consulting Group
+Wei,Johansson,Legal Counsel,Marsh Aviation
+Leopold,Park,Director Composites Engineering,HEICO Corporation
+Barbara,Tanaka,VP Business Development,McKinsey & Company
+Javier,Volkov,VP Quality & Certification,Composites World Media
+Petra,Jung,Finance Analyst,Barclays Aerospace Finance
+Petra,Koch,Plant Manager,Moog Inc.
+Fernando,Lee,Director Certification,DuPont de Nemours
+Luca,Garcia,Chief Executive Officer,Purdue University Composites Lab
+Miho,Vega,Chief Materials Engineer,Evonik Industries
+Stefan,Lefevre,Director Program Management,Dassault Aviation
+Sebastian,Martinez,Student Intern,University of Bristol Composites
+Monique,Weber,Senior Director Operations,Collins Aerospace
+David,Ferrari,Finance Analyst,JEC Group
+Friedrich,Hauser,Chairman,SABIC
+Thomas,Krishnan,President,Pilatus Aircraft
+Jennifer,Torres,Chairman,Aciturri
+Chiara,Roth,Director Supply Chain,Lufthansa Technik
+Kazuki,Tanaka,Director Certification,Henkel AG
+Deepa,Wolf,Finance Analyst,KPMG Advisory
+Camille,Vogt,Process Engineer Lead,Ducommun
+Jennifer,Wagner,Director Program Management,Etihad Engineering
+Ryota,Strauss,Director Composites Engineering,Renegade Materials
+Stefan,Conti,Materials Science Lead,National Composites Centre
+Constance,Hauser,Director R&D,Collins Aerospace
+Henrik,Williams,EVP Strategy,Rolls-Royce
+Jan,Weber,Head of Sustainable Materials,Hexcel Corporation
+Mika,Schmidt,Research Student,AIG Insurance
+Matteo,Fuchs,Vice President Engineering,GKN Aerospace
+Hiroshi,Hoffmann,Advanced Materials Researcher,Northrop Grumman
+Erik,Berger,VP Program Management,Woodward Inc.
+Leopold,Hoffmann,VP Supply Management,Parker Hannifin
+Isabella,Watanabe,Accounting Associate,JEC Group
+Friedrich,Beaumont,Finance Analyst,Boston Consulting Group
+Kazuki,Wagner,Composites R&D Manager,Triumph Group
+Robert,Navarro,Director Strategic Accounts,Pratt & Whitney
+Andreas,Berger,Research Student,TU Delft Aerospace
+Michael,Kern,CEO,KPMG Advisory
+Delphine,Engel,Materials Engineering Manager,National Composites Centre
+Akira,Schuster,Director Quality Assurance,BAE Systems
+Raj,Zimmerman,Director Quality Assurance,Aernnova Aerospace
+Elena,Takahashi,Composites R&D Manager,Spirit AeroSystems
+Kazuki,Schuster,VP Materials & Processes,Teijin Limited
+Arjun,Hoffmann,Nadcap Coordinator,GKN Aerospace
+Chiara,Patel,Advanced Materials Researcher,Fraunhofer IFAM
+Antoine,Patel,Finance Analyst,Boston Consulting Group
+Yuki,Mueller,Director Quality Assurance,Bombardier Aviation
+Patrick,Johnson,Director Strategic Accounts,University of Bristol Composites
+Chen,Schneider,Research Student,DLA Piper
+Helene,Bergmann,VP Program Management,Arkema SA
+Christian,Gupta,Chief Financial Officer,Albany International Composites
+Elena,Kern,Vice President Engineering,Baker McKenzie
+Constance,Tanaka,VP Program Management,Arkema SA
+Laura,Sharma,PR Assistant,National Institute for Aviation Research
+Constance,Hoffmann,Director Quality Assurance,AIG Insurance
+Ingrid,Williams,Circular Economy Lead,Leonardo S.p.A.
+Julia,Ito,Director Strategic Accounts,SGL Carbon
+Takeshi,Williams,Senior Composites Specialist,Leonardo S.p.A.
+Tobias,Mayer,Director Quality Assurance,Barclays Aerospace Finance
+Rafael,Ito,VP Program Management,Teijin Limited
+Leopold,Suzuki,Director R&D,KPMG Advisory
+Olivier,Lindstrom,Student Intern,Purdue University Composites Lab
+Beatrice,Sharma,Student Intern,Purdue University Composites Lab
+Deepa,Koch,Director Certification,Cranfield University
+Xin,Wolf,Research Student,Deloitte Consulting
+Hiroshi,Wolf,VP Technology,Avio Aero
+Elena,Schuster,VP Business Development,Altair Engineering
+Bernhard,Takahashi,PR Assistant,AIG Insurance
+Eva,Nakamura,Staff Attorney,JEC Group
+Wei,Romero,Chief Executive Officer,Deutsche Bank
+Xin,Tanaka,Director R&D,GE Aerospace
+Klaus,Zimmerman,Advanced Materials Researcher,Moog Inc.
+Astrid,Keller,Senior Composites Specialist,Embraer
+Luca,Navarro,Director Quality Assurance,Curtiss-Wright
+Matteo,Suzuki,Chief Procurement Officer,Spirit AeroSystems
+Valentina,Keller,Senior Composites Specialist,MIT AeroAstro
+Ryota,Beaumont,Chief Operating Officer,Siemens Digital Industries
+Gabrielle,Rossi,VP Procurement,Embraer
+Fatima,Wolf,Head of Materials Technology,Huntsman Corporation
+Greta,Ruiz,VP Manufacturing,Northrop Grumman
+Michael,Kim,Chief Executive Officer,FlightGlobal
+Wei,Bergmann,PR Assistant,FlightGlobal
+Ravi,Alvarez,Head of Materials Technology,GKN Aerospace
+Amira,Volkov,VP Strategic Partnerships,Dentons LLP
+Francesca,Dubois,NDT Manager,Air New Zealand Engineering
+Mei,Braun,Sourcing Manager,Figeac Aero
+Nicole,Mayer,Plant Manager,RUAG International
+Sanjay,Lee,VP Manufacturing,Emirates Engineering
+Akira,Wagner,Director Certification,Latecoere
+Sanjay,Sato,Process Engineer Lead,Magellan Aerospace
+Sophie,Ferrari,Senior Director Operations,HAECO Group
+Romain,Tanaka,Senior Composites Specialist,Orbital Composites
+Deepa,Seidel,Materials Engineering Manager,Huntsman Corporation
+Haruka,Ito,VP Strategic Partnerships,Deutsche Bank
+Thomas,Hauser,SVP Engineering,Aerostructures Engineering
+Constance,Stein,Manufacturing Engineering Manager,Safran
+Sarah,Watanabe,Composites R&D Manager,Gulfstream Aerospace
+Teresa,Vega,President & CEO,RUAG International
+Mei,Sato,Senior Vice President R&D,Airbus
+Lucia,Engel,Plant Manager,Ducommun
+Jan,Mancini,President,Boston Consulting Group
+Sakura,Maier,Director Composite Procurement,Dassault Aviation
+Miguel,Sharma,CEO,Lanxess AG
+Christine,Fischer,Director Strategic Accounts,Fokker Technologies
+Teresa,Liu,Student Intern,Dentons LLP
+Ananya,Keller,EVP Operations,TransDigm Group
+Henrik,Fernandez,Chairman,Deutsche Bank
+Greta,Kim,Senior Director Operations,Gulfstream Aerospace
+Carmen,Vega,Strategic Procurement Director,Curtiss-Wright
+Kaori,Gupta,Plant Manager,RUAG International
+Lin,Schuster,Chief Procurement Officer,Pilatus Aircraft
+Daniel,Berger,Chairman,Covestro AG
+Erik,Zimmerman,Chief Procurement Officer,Kawasaki Heavy Industries
+Robert,Kobayashi,Staff Attorney,JEC Group
+Camille,Sharma,Manufacturing Engineering Manager,ST Aerospace
+Mika,Weber,Chairman,Composites World Media
+Fatima,Watanabe,Junior Associate,Barclays Aerospace Finance
+Alvaro,Kobayashi,Materials Science Lead,Arkema SA
+Philippe,Beaumont,Global Sourcing Lead,Air France Industries
+Robert,Moreau,Lead Composites Engineer,RUAG International
+Erik,Nakamura,VP Business Development,Mitsubishi Heavy Industries
+Lin,Kern,Plant Manager,Aernnova Aerospace
+Sarah,Volkov,Materials Procurement Lead,Premium Aerotec
+Lin,Stein,Sustainability Manager,Zoltek Companies
+Kenji,Hartmann,Senior Procurement Manager,Gulfstream Aerospace
+Matteo,Wang,VP Strategic Partnerships,Dow Inc.
+Nikolai,Stein,Advanced Materials Researcher,Figeac Aero
+Paolo,Fernandez,Production Director,Premium Aerotec
+Sebastian,Vogt,Director Certification,Hexcel Corporation
+Constance,Wang,Director R&D,Gulfstream Aerospace
+Takeshi,De Luca,VP Quality & Certification,SIA Engineering
+Constance,Garcia,Director Production,Kaman Aerospace
+Tobias,Stein,President,Mitsubishi Heavy Industries
+Paolo,Schmidt,Director Certification,Leonardo S.p.A.
+Priya,Rossi,Composites R&D Manager,Howmet Aerospace
+Andreas,Alvarez,Director Engineering,Rolls-Royce
+Andreas,Navarro,Director Engineering,Textron Aviation
+Friedrich,Mueller,NDT Manager,Lufthansa Technik
+Sergio,Yamamoto,Advanced Materials Researcher,Parker Hannifin
+Philippe,Park,Chief Materials Engineer,Kawasaki Heavy Industries
+Elena,Stein,Vice President Engineering,Mitsubishi Chemical
+Miho,Dubois,Director Program Management,Woodward Inc.
+Kazuki,Keller,Junior Associate,Aviation Week Network
+Simone,Krause,Director Program Management,Aeroplex Group
+Helene,Kim,Manufacturing Engineering Manager,SIA Engineering
+Marco,Vega,Head of Materials Technology,GE Aerospace
+Mei,Gupta,Chief Executive Officer,Altair Engineering
+Laura,Wagner,Research Analyst,National Institute for Aviation Research
