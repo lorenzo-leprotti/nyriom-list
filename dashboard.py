@@ -35,53 +35,6 @@ KNOWN_SUPPLIERS = [
 ]
 
 # =============================================================================
-# PASSWORD PROTECTION
-# =============================================================================
-def check_password():
-    """Returns True if the user has entered the correct password."""
-
-    def password_entered():
-        try:
-            correct_password = st.secrets["password"]
-        except Exception:
-            correct_password = "demo2026"
-
-        if st.session_state["password"] == correct_password:
-            st.session_state["password_correct"] = True
-            del st.session_state["password"]
-        else:
-            st.session_state["password_correct"] = False
-
-    if "password_correct" not in st.session_state:
-        st.markdown("## AEROCOM 2025 - Nyriom Technologies")
-        st.markdown("*Delegate Prioritization Dashboard*")
-        st.markdown("---")
-        st.text_input(
-            "Enter password to access:",
-            type="password",
-            on_change=password_entered,
-            key="password",
-        )
-        st.markdown("*Contact your team lead if you need access.*")
-        return False
-
-    elif not st.session_state["password_correct"]:
-        st.markdown("## AEROCOM 2025 - Nyriom Technologies")
-        st.markdown("---")
-        st.text_input(
-            "Enter password to access:",
-            type="password",
-            on_change=password_entered,
-            key="password",
-        )
-        st.error("Incorrect password. Please try again.")
-        return False
-
-    else:
-        return True
-
-
-# =============================================================================
 # DATA HELPERS
 # =============================================================================
 def _has_display_data(value) -> bool:
@@ -132,10 +85,21 @@ def load_data():
 # PAGE 1: TOP 50 DELEGATES
 # =============================================================================
 def render_top50(df):
-    """Render the TOP 50 delegates page."""
+    """Render the TOP 50 delegates page with Delegates and Supplier Landscape tabs."""
     st.markdown("### Your Priority Engagement List")
     st.markdown("*AEROCOM 2025 — Advanced Composites Conference, Toulouse*")
 
+    tab_delegates, tab_suppliers = st.tabs(["Delegates", "Supplier Landscape"])
+
+    with tab_delegates:
+        _render_delegates_tab(df)
+
+    with tab_suppliers:
+        render_supplier_intel(df)
+
+
+def _render_delegates_tab(df):
+    """Render the delegates table, filters, and detail view."""
     # Summary metrics row
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -677,31 +641,26 @@ This tool transforms ~500 AEROCOM 2025 delegates into a prioritized TOP 50 engag
   v ~250 relevant delegates
   |
   +-- Step 2: AI-powered research (13 variables per delegate)
-  |     Supports: Perplexity Sonar, Ollama (local LLM), or pre-generated demo data
+  |     Uses Perplexity Sonar (web search) or pre-generated demo data
   |
   +-- Step 3: Multi-factor scoring + ranking
   |
   v TOP 60 scored delegates
   |
   +-- Step 4: Deep research on TOP 60 (fill data gaps)
-  |     Uses Sonar Pro, local LLM, or demo data
+  |     Uses Sonar Pro or demo data
   |
   +-- Step 5: Re-score with enhanced data, produce TOP 50
   v
   FINAL TOP 50 deliverable
 ```
 
-### Research Backend Architecture
-
-The pipeline supports three interchangeable research backends:
+### Research Backend
 
 | Backend | Model | Web Search | Cost | Use Case |
 |---------|-------|------------|------|----------|
 | **Perplexity Sonar** | sonar / sonar-pro | Yes | ~$1.85 | Production — verified web research |
-| **Ollama** | mistral / llama3 | No | Free | Local inference — open-source showcase |
 | **Demo** | Pre-generated JSON | N/A | Free | Portfolio demo — instant, no setup |
-
-All backends implement a common `ResearchBackend` interface, making it easy to add new providers.
 
 ### Scoring Formula (max ~155 points)
 
@@ -751,6 +710,137 @@ def render_methodology():
 
 
 # =============================================================================
+# PAGE 5: HOW IT WORKS
+# =============================================================================
+
+def render_how_it_works(top50, all_filtered):
+    """Render a simple, scannable pipeline explainer page."""
+    st.markdown("### How It Works")
+    st.markdown("*From a conference guest list to your top 50 people to meet*")
+
+    # --- PIPELINE FUNNEL ---
+    st.markdown("---")
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.metric("Start", "522 delegates")
+        st.caption("Everyone registered for the conference")
+    with c2:
+        st.metric("Filter", "249 relevant")
+        st.caption("Remove companies and roles that don't buy materials")
+    with c3:
+        st.metric("Research + Score", "60 top candidates")
+        st.caption("AI researches each person, then scores and ranks them")
+    with c4:
+        st.metric("Result", "TOP 50")
+        st.caption("Final ranked list of who to talk to, with full context")
+
+    # --- RAW INPUT DATA ---
+    st.markdown("---")
+    st.markdown("#### The starting point")
+    st.markdown("This is the raw conference guest list we begin with — names, job titles, and companies. Nothing else.")
+
+    input_path = Path("input/aerocom_2025_delegates.csv")
+    if input_path.exists():
+        raw_df = pd.read_csv(input_path)
+        st.dataframe(raw_df.head(10), use_container_width=True, hide_index=True)
+        st.caption(f"Showing 10 of {len(raw_df)} rows")
+        st.download_button(
+            "Download full delegate list",
+            data=raw_df.to_csv(index=False).encode("utf-8"),
+            file_name="aerocom_2025_delegates.csv",
+            mime="text/csv",
+        )
+    else:
+        st.info("Input file not found at input/aerocom_2025_delegates.csv")
+
+    # --- WHAT EACH STEP DOES ---
+    st.markdown("---")
+    st.markdown("#### What happens at each step")
+
+    st.markdown("""
+**1. Filter** — We sort every delegate by their company type (aircraft maker, parts supplier, material company, etc.)
+and their job role. Anyone from a company that doesn't buy materials — like law firms, media, or universities — is
+removed. Same for junior roles like interns or assistants. This cuts the list roughly in half.
+
+**2. Research** — For each remaining person, AI looks up 13 things about them and their company:
+what programs they work on, whether they're involved in selecting materials, who their current suppliers are,
+their R&D budget, and more.
+
+**3. Score** — Each person gets a priority score based on four factors: how senior they are,
+how relevant their company is, how close they are to material purchasing decisions, and what the research
+found (like active lightweighting programs or sustainability goals).
+
+**4. Enhance** — The top 60 get a second, deeper research pass to fill in any gaps from the first round.
+If we didn't find their current suppliers or R&D budget the first time, we try again with a more thorough search.
+
+**5. Final ranking** — Everyone is re-scored with the new data and ranked. The top 50 become your
+engagement list, delivered as a spreadsheet and this interactive dashboard.
+""")
+
+    # --- WHAT THE AI RESEARCHES ---
+    st.markdown("---")
+    st.markdown("#### What the AI looks up for each person")
+
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("**Company profile**")
+        st.markdown("- Type of company (aircraft maker, parts supplier, etc.)\n- Number of active programs\n- Geographic reach\n- Production volume")
+
+        st.markdown("**Purchasing signals**")
+        st.markdown("- Do they select or influence material choices?\n- Who are their current material suppliers?\n- Do they write or approve material specifications?")
+    with c2:
+        st.markdown("**Growth signals**")
+        st.markdown("- Active lightweighting or weight-reduction projects\n- R&D budget or recent investment\n- Recent acquisitions or new programs")
+
+        st.markdown("**Sustainability**")
+        st.markdown("- Environmental or green manufacturing initiatives\n- Interest in bio-based or sustainable materials")
+
+    # --- HOW SCORING WORKS ---
+    st.markdown("---")
+    st.markdown("#### How scoring works")
+    st.markdown("Each person's score is built from four components:")
+
+    if "Rank" in top50.columns and len(top50) > 0:
+        top1 = top50[top50["Rank"] == 1].iloc[0] if (top50["Rank"] == 1).any() else top50.iloc[0]
+        name = f"{top1['First Name']} {top1['Last Name']}"
+
+        components = {
+            "Job seniority": int(top1.get("Title_Score", 0)),
+            "Company relevance": int(top1.get("Company_Score", 0)),
+            "Materials closeness": int(top1.get("Materials_Adoption_Proximity", 0)),
+            "Research signals": int(top1.get("Research_Boost", 0)),
+        }
+        if top1.get("Is_Key_Contact") == "Y":
+            components["Pre-identified target"] = 30
+
+        fig = go.Figure(data=[
+            go.Bar(
+                x=[v], y=["Score"], name=k, orientation="h",
+                text=[f"{k}: {v}"], textposition="inside",
+            )
+            for k, v in components.items() if v > 0
+        ])
+        fig.update_layout(
+            barmode="stack",
+            title=f"Example: {name} — #{int(top1.get('Rank', 1))} overall ({int(top1['Priority_Score'])} points)",
+            xaxis_title="Points",
+            yaxis_visible=False,
+            height=120,
+            margin=dict(l=0, r=20, t=40, b=20),
+            showlegend=False,
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+        st.markdown(
+            "- **Job seniority** — VPs and directors score higher than engineers or coordinators\n"
+            "- **Company relevance** — Material suppliers and aircraft makers score highest\n"
+            "- **Materials closeness** — People who directly choose or approve materials get the most points\n"
+            "- **Research signals** — Bonus points for lightweighting projects, sustainability goals, or big R&D budgets"
+        )
+
+
+# =============================================================================
 # MAIN
 # =============================================================================
 def main():
@@ -760,11 +850,8 @@ def main():
         layout="wide",
     )
 
-    if not check_password():
-        return
-
     st.title("AEROCOM 2025 — Delegate Prioritization")
-    st.markdown("*Advanced Composites Conference, Toulouse | Nyriom Technologies / NyrionPlex*")
+    st.caption("Nyriom Technologies — Berlin-based bio-polymer composites startup | NyrionPlex advanced composite materials")
 
     # Load data
     top50, all_filtered, materials_targets = load_data()
@@ -777,7 +864,7 @@ def main():
     # Sidebar navigation
     page = st.sidebar.radio(
         "Navigation",
-        ["TOP 50 Delegates", "Supplier Intelligence", "Overview & Stats", "Methodology"],
+        ["How It Works", "TOP 50 Delegates", "Overview & Stats", "Methodology"],
     )
 
     st.sidebar.markdown("---")
@@ -792,10 +879,10 @@ def main():
     st.sidebar.metric("Key Contacts", key_count)
 
     # Render selected page
-    if page == "TOP 50 Delegates":
+    if page == "How It Works":
+        render_how_it_works(top50, all_filtered)
+    elif page == "TOP 50 Delegates":
         render_top50(top50)
-    elif page == "Supplier Intelligence":
-        render_supplier_intel(top50)
     elif page == "Overview & Stats":
         render_overview(top50, all_filtered)
     else:
@@ -803,7 +890,7 @@ def main():
 
     # Footer
     st.sidebar.markdown("---")
-    st.sidebar.markdown("*Research: Perplexity AI / Ollama / Demo*")
+    st.sidebar.markdown("*Research: Perplexity AI / Demo*")
     st.sidebar.markdown("*Source: AEROCOM 2025 Delegate Roster*")
     st.sidebar.markdown("*Built with Streamlit*")
 

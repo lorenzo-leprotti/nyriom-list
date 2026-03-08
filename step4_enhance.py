@@ -7,7 +7,6 @@ for the top-scored delegates (buffer for final ranking).
 
 Supports:
 - Perplexity Sonar Pro (production, web-grounded deep research)
-- Ollama (local open-source LLM)
 - Demo (pre-generated data, zero cost)
 
 Priority gap-filling order:
@@ -21,7 +20,6 @@ Priority gap-filling order:
 Usage:
     python step4_enhance.py --backend demo         # Zero-cost demo (default)
     python step4_enhance.py --backend perplexity   # Production
-    python step4_enhance.py --backend ollama       # Local LLM
     python step4_enhance.py --test 5               # Test with first 5
 
 Output:
@@ -348,18 +346,12 @@ Return ONLY valid JSON:
 
 def main():
     parser = argparse.ArgumentParser(description="AEROCOM 2025 Enhancement")
-    parser.add_argument("--backend", choices=["perplexity", "ollama", "demo"],
+    parser.add_argument("--backend", choices=["perplexity", "demo"],
                         default="demo", help="Research backend (default: demo)")
     parser.add_argument("--test", type=int, help="Test with first N delegates")
-    parser.add_argument("--model", type=str, default=None,
-                        help="Ollama model name (default: llama3)")
     args = parser.parse_args()
 
-    backend_kwargs = {}
-    if args.model and args.backend == "ollama":
-        backend_kwargs["model"] = args.model
-
-    enhancer = AerocomEnhancer(backend_name=args.backend, **backend_kwargs)
+    enhancer = AerocomEnhancer(backend_name=args.backend)
     enhancer.run(test_count=args.test)
 
 

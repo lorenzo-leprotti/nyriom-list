@@ -4,13 +4,12 @@ Research Backend Abstraction
 
 Provides a unified interface for prospect research across multiple backends:
 - PerplexityBackend: Production web research via Perplexity Sonar API
-- OllamaBackend: Local open-source LLM inference via Ollama
 - DemoBackend: Pre-generated research data for zero-cost demo runs
 
 Usage:
     from research_backends import get_backend
 
-    backend = get_backend("perplexity")  # or "ollama" or "demo"
+    backend = get_backend("perplexity")  # or "demo"
     result = backend.research(system_prompt, user_prompt)
 """
 
@@ -136,81 +135,6 @@ class PerplexityBackend(ResearchBackend):
             return {"error": str(e)}
 
 
-class OllamaBackend(ResearchBackend):
-    """Local LLM backend using Ollama for open-source model inference.
-
-    Supports any model available in Ollama (e.g., mistral, llama3, qwen2.5).
-    Note: Local models cannot perform web search, so research quality
-    depends on the model's training data.
-    """
-
-    DEFAULT_MODEL = "mistral"
-    DEFAULT_PRO_MODEL = "llama3"
-    OLLAMA_URL = "http://localhost:11434/api/chat"
-
-    def __init__(self, model: str = None, pro_model: str = None):
-        self.model = model or self.DEFAULT_MODEL
-        self.pro_model = pro_model or self.DEFAULT_PRO_MODEL
-        self.call_count = 0
-        self._verify_ollama()
-
-    def _verify_ollama(self):
-        """Check that Ollama is running and the model is available."""
-        try:
-            resp = requests.get("http://localhost:11434/api/tags", timeout=5)
-            resp.raise_for_status()
-            available = [m["name"].split(":")[0] for m in resp.json().get("models", [])]
-            if self.model not in available:
-                print(f"  Warning: Model '{self.model}' not found in Ollama.")
-                print(f"  Available: {', '.join(available) or 'none'}")
-                print(f"  Run: ollama pull {self.model}")
-        except requests.ConnectionError:
-            raise ConnectionError(
-                "Ollama is not running. Start it with: ollama serve\n"
-                "Or use --backend demo for zero-cost runs."
-            )
-
-    @property
-    def name(self) -> str:
-        return f"Ollama ({self.model})"
-
-    @property
-    def supports_web_search(self) -> bool:
-        return False
-
-    def rate_limit_delay(self, model_tier: str = "standard") -> float:
-        return 0.5  # Local inference, minimal delay
-
-    def research(self, system_prompt: str, user_prompt: str,
-                 model_tier: str = "standard") -> dict:
-        model = self.pro_model if model_tier == "pro" else self.model
-
-        payload = {
-            "model": model,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-            "stream": False,
-            "options": {"temperature": 0.1},
-        }
-
-        try:
-            response = requests.post(
-                self.OLLAMA_URL,
-                json=payload,
-                timeout=120,
-            )
-            response.raise_for_status()
-            self.call_count += 1
-            data = response.json()
-            content = data.get("message", {}).get("content", "{}")
-            return {"content": content, "citations": []}
-
-        except Exception as e:
-            return {"error": str(e)}
-
-
 class DemoBackend(ResearchBackend):
     """Zero-cost demo backend using pre-generated research data.
 
@@ -324,7 +248,7 @@ def get_backend(backend_name: str, **kwargs) -> ResearchBackend:
     """Factory function to create the appropriate research backend.
 
     Args:
-        backend_name: One of "perplexity", "ollama", or "demo"
+        backend_name: One of "perplexity" or "demo"
         **kwargs: Additional arguments passed to the backend constructor
 
     Returns:
@@ -332,7 +256,6 @@ def get_backend(backend_name: str, **kwargs) -> ResearchBackend:
     """
     backends = {
         "perplexity": PerplexityBackend,
-        "ollama": OllamaBackend,
         "demo": DemoBackend,
     }
 

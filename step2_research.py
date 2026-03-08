@@ -4,7 +4,6 @@ Step 2: Research AEROCOM 2025 Delegates
 
 Researches ~250 filtered delegates using configurable research backends:
 - Perplexity Sonar (production, web-grounded)
-- Ollama (local open-source LLM)
 - Demo (pre-generated data, zero cost)
 
 13 expansion variables:
@@ -16,7 +15,6 @@ Researches ~250 filtered delegates using configurable research backends:
 Usage:
     python step2_research.py --backend demo       # Zero-cost demo (default)
     python step2_research.py --backend perplexity  # Production web research
-    python step2_research.py --backend ollama      # Local LLM
     python step2_research.py --test 5              # Test with first 5
     python step2_research.py --resume              # Resume from last checkpoint
 
@@ -324,7 +322,7 @@ Return ONLY valid JSON:
 
     def run(self, test_count: int = None, resume: bool = False):
         """Run the research pipeline."""
-        # Validate (skip API key check for demo/ollama)
+        # Validate (skip API key check for demo)
         if not CHECKPOINT1_FILE.exists():
             print(f"ERROR: Checkpoint 1 not found: {CHECKPOINT1_FILE}")
             print("Run step1_buckets.py first.")
@@ -427,25 +425,18 @@ Return ONLY valid JSON:
 
 def main():
     parser = argparse.ArgumentParser(description="AEROCOM 2025 Research Pipeline")
-    parser.add_argument("--backend", choices=["perplexity", "ollama", "demo"],
+    parser.add_argument("--backend", choices=["perplexity", "demo"],
                         default="demo", help="Research backend (default: demo)")
     parser.add_argument("--dual-pass", action="store_true",
                         help="Enable dual-pass verification (doubles API calls)")
     parser.add_argument("--test", type=int, help="Test with first N delegates")
     parser.add_argument("--resume", action="store_true",
                         help="Resume from last checkpoint")
-    parser.add_argument("--model", type=str, default=None,
-                        help="Ollama model name (default: mistral)")
     args = parser.parse_args()
-
-    backend_kwargs = {}
-    if args.model and args.backend == "ollama":
-        backend_kwargs["model"] = args.model
 
     pipeline = AerocomResearchPipeline(
         backend_name=args.backend,
         dual_pass=args.dual_pass,
-        **backend_kwargs,
     )
     pipeline.run(test_count=args.test, resume=args.resume)
 

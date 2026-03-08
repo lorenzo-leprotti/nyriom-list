@@ -12,6 +12,8 @@ import json
 import random
 from pathlib import Path
 
+from nyriom_config import COMPANY_BUCKETS, FUNCTION_BUCKETS
+
 random.seed(42)  # Reproducible results
 
 BASE_DIR = Path(__file__).parent
@@ -25,78 +27,21 @@ KEY_CONTACTS = {
     ("Jan", "Weber", "Hexcel Corporation"),
 }
 
-# ─── Company classification helpers ─────────────────────────────────────────
+# ─── Company classification patterns (derived from nyriom_config.py) ─────────
+# Maps bucket letter → pattern list for reuse in classify_company()
 
-OEM_PATTERNS = [
-    "airbus", "boeing", "embraer", "bombardier", "dassault aviation",
-    "lockheed martin", "northrop grumman", "raytheon", "bae systems",
-    "leonardo", "textron aviation", "gulfstream", "cessna", "pilatus",
-    "saab", "kawasaki heavy", "mitsubishi heavy", "comac",
-]
-
-TIER1_PATTERNS = [
-    "safran", "collins aerospace", "raytheon technologies",
-    "spirit aerosystems", "ge aerospace", "ge aviation",
-    "rolls-royce", "pratt & whitney", "honeywell aerospace",
-    "moog", "parker hannifin", "parker aerospace",
-    "curtiss-wright", "triumph group", "howmet",
-    "transdigm", "heico", "meggitt", "senior plc",
-    "woodward", "ducommun",
-]
-
-TIER23_PATTERNS = [
-    "albany international", "albany engineered", "kaman aerospace",
-    "hexion", "teledyne", "aerojet rocketdyne", "orbital atk",
-    "premium aerotec", "stelia aerospace", "daher", "latecoere",
-    "figeac aero", "aernnova", "aciturri", "gkn aerospace",
-    "fokker", "avio aero", "itp aero", "liebherr aerospace",
-    "facc", "ruag", "composites", "composite", "aerostructures",
-    "tooling", "prepreg", "autoclave", "fiber placement",
-    "magellan aerospace", "orbital composites",
-]
-
-MATERIAL_SUPPLIER_PATTERNS = [
-    "hexcel", "toray", "solvay", "basf", "dupont", "arkema",
-    "teijin", "covestro", "huntsman", "cytec", "mitsubishi chemical",
-    "sabic", "evonik", "lanxess", "dow", "3m", "henkel",
-    "sgl carbon", "zoltek", "gurit", "renegade materials",
-    "tencate", "park electrochemical", "isola group",
-    "carbon fiber", "resin", "polymer", "chemical",
-    "material supplier", "materials", "adhesive", "coating",
-]
-
-AIRLINE_MRO_PATTERNS = [
-    "lufthansa technik", "air france industries", "st aerospace",
-    "haeco", "aar corp", "turkish technic", "delta techops",
-    "emirates engineering", "etihad engineering", "aeroplex",
-    "aviall", "airline", "airlines", "airways", "mro",
-    "maintenance", "overhaul", "repair station",
-]
-
-INVESTMENT_PATTERNS = [
-    "carlyle", "blackstone", "brookfield", "cerberus", "kkr",
-    "apollo", "capital", "investment", "investor", "private equity",
-    "equity partners", "partners", "fund ", "funds", "advisors",
-    "advisory", "ventures", "asset management",
-]
-
-ENGINEERING_PATTERNS = [
-    "altair", "ansys", "dassault systemes", "siemens digital",
-    "msc software", "engineering services", "design services",
-    "simulation", "structural analysis", "consulting engineer",
-    "test laboratory", "certification",
-]
-
-EXCLUDE_PATTERNS = [
-    "law firm", "llp", "legal", "attorney", "consulting group",
-    "consultants", "management consulting", "bank", "banking",
-    "insurance", "accounting", "audit", "composites world",
-    "jec group", "aviation week", "flightglobal", "flight global",
-    "media", "magazine", "publishing", "news", "trade show",
-    "university", "college", "school of", "institute of",
-    "academic", "student", "fraunhofer", "dlr", "onera", "nasa",
-    "national laboratory", "deloitte",
-]
+OEM_PATTERNS = COMPANY_BUCKETS["A"]["patterns"]
+TIER1_PATTERNS = COMPANY_BUCKETS["B"]["patterns"]
+TIER23_PATTERNS = COMPANY_BUCKETS["C"]["patterns"]
+MATERIAL_SUPPLIER_PATTERNS = COMPANY_BUCKETS["D"]["patterns"]
+AIRLINE_MRO_PATTERNS = COMPANY_BUCKETS["E"]["patterns"]
+INVESTMENT_PATTERNS = COMPANY_BUCKETS["F"]["patterns"]
+ENGINEERING_PATTERNS = COMPANY_BUCKETS["G"]["patterns"]
+EXCLUDE_PATTERNS = (
+    COMPANY_BUCKETS["H"]["patterns"]
+    + COMPANY_BUCKETS["I"]["patterns"]
+    + COMPANY_BUCKETS["J"]["patterns"]
+)
 
 # ─── Region mapping for well-known companies ────────────────────────────────
 
@@ -189,30 +134,22 @@ COMPANY_REGION = {
 def classify_company(company_name):
     """Return (company_type_label, category_key)."""
     cn = company_name.lower()
-    for p in OEM_PATTERNS:
-        if p in cn:
-            return ("Aerospace OEM", "OEM")
-    for p in TIER1_PATTERNS:
-        if p in cn:
-            return ("Tier 1 Aerostructures Supplier", "TIER1")
-    for p in MATERIAL_SUPPLIER_PATTERNS:
-        if p in cn:
-            return ("Material Supplier / Chemical Co.", "MATERIAL")
-    for p in TIER23_PATTERNS:
-        if p in cn:
-            return ("Tier 2-3 Specialty Manufacturer", "TIER23")
-    for p in AIRLINE_MRO_PATTERNS:
-        if p in cn:
-            return ("Airline / MRO", "MRO")
-    for p in INVESTMENT_PATTERNS:
-        if p in cn:
-            return ("Investment / PE", "INVEST")
-    for p in ENGINEERING_PATTERNS:
-        if p in cn:
-            return ("Engineering / Design Services", "ENG")
-    for p in EXCLUDE_PATTERNS:
-        if p in cn:
-            return ("Other", "EXCLUDE")
+    # Order matters: check material suppliers (D) before tier 2-3 (C) due to
+    # broad catch-all patterns in both buckets
+    checks = [
+        (OEM_PATTERNS, COMPANY_BUCKETS["A"]["label"], "OEM"),
+        (TIER1_PATTERNS, COMPANY_BUCKETS["B"]["label"], "TIER1"),
+        (MATERIAL_SUPPLIER_PATTERNS, COMPANY_BUCKETS["D"]["label"], "MATERIAL"),
+        (TIER23_PATTERNS, COMPANY_BUCKETS["C"]["label"], "TIER23"),
+        (AIRLINE_MRO_PATTERNS, COMPANY_BUCKETS["E"]["label"], "MRO"),
+        (INVESTMENT_PATTERNS, COMPANY_BUCKETS["F"]["label"], "INVEST"),
+        (ENGINEERING_PATTERNS, COMPANY_BUCKETS["G"]["label"], "ENG"),
+        (EXCLUDE_PATTERNS, "Other", "EXCLUDE"),
+    ]
+    for patterns, label, key in checks:
+        for p in patterns:
+            if p in cn:
+                return (label, key)
     return ("Other", "EXCLUDE")
 
 
