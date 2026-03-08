@@ -101,7 +101,7 @@ dashboard.py              ← Streamlit dashboard
 
 | Project | Description |
 |---------|-------------|
-| [nyriom-intel-hub](https://github.com/lollo408/nyriom-intel-hub) | AI market intelligence platform |
+| [Nyriom Intelligence](https://github.com/lollo408/nyriom-intelligence) | AI market intelligence platform |
 | [nyriom-dashboard](https://github.com/lollo408/nyriom-dashboard) | Sustainability impact simulator |
 
 ## Disclosure
