@@ -57,7 +57,7 @@ Python, Streamlit, Perplexity Sonar API, Pandas, Plotly
 ### Demo mode (no API key, instant, free)
 
 ```bash
-git clone https://github.com/lollo408/nyriom-list.git
+git clone https://github.com/lorenzo-leprotti/nyriom-list.git
 cd nyriom-list
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
@@ -101,8 +101,8 @@ dashboard.py              ← Streamlit dashboard
 
 | Project | Description |
 |---------|-------------|
-| [Nyriom Intelligence](https://github.com/lollo408/nyriom-intelligence) | AI market intelligence platform |
-| [nyriom-dashboard](https://github.com/lollo408/nyriom-dashboard) | Sustainability impact simulator |
+| [Nyriom Intelligence](https://github.com/lorenzo-leprotti/nyriom-intelligence) | AI market intelligence platform |
+| [nyriom-dashboard](https://github.com/lorenzo-leprotti/nyriom-dashboard) | Sustainability impact simulator |
 
 ## Disclosure
 
